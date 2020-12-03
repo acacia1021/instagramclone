@@ -56,6 +56,10 @@
         "source": "C:\\Users\\acaci\\AndroidStudioProjects\\instagramclone\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\acaci\\AndroidStudioProjects\\instagramclone\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_posts.xml.flat",
+        "source": "C:\\Users\\acaci\\AndroidStudioProjects\\instagramclone\\app\\src\\main\\res\\layout\\fragment_posts.xml"
+    },
+    {
         "merged": "C:\\Users\\acaci\\AndroidStudioProjects\\instagramclone\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\acaci\\AndroidStudioProjects\\instagramclone\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
