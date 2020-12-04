@@ -1362,6 +1362,7 @@ id flContainer
 id flip
 id forever
 id ghost_view
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -1381,6 +1382,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id ivImage
 id ivPostImage
 id jumpToEnd
 id jumpToStart
@@ -1433,6 +1435,7 @@ id reverseSawtooth
 id right
 id right_icon
 id right_side
+id rvPosts
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1519,6 +1522,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvDescription
+id tvUsername
 id unchecked
 id uniform
 id unlabeled
@@ -1603,6 +1608,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_compose
 layout fragment_posts
+layout item_post
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action

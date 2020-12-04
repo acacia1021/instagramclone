@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.instagramclone.fragments.ComposeFragment;
 import com.example.instagramclone.fragments.PostsFragment;
+import com.example.instagramclone.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -66,7 +67,7 @@ bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationVie
                 break;
             case R.id.action_profile:
             default:
-                fragment = new ComposeFragment();
+                fragment = new ProfileFragment();
                 Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
                 break;
         }
