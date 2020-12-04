@@ -34,7 +34,7 @@ public class PostsFragment extends Fragment {
     public static final String TAG = "PostsFragment";
     private RecyclerView rvPosts;
     protected PostsAdapter adapter;
-    SwipeRefreshLayout swipeContainer;
+    SwipeRefreshLayout swipeRefreshLayout;
     protected List<Post> allPosts;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -87,14 +87,38 @@ public class PostsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        rvPosts = view.findViewById(R.id.rvPosts);
-        allPosts = new ArrayList<>();
-        adapter = new PostsAdapter(getContext(), allPosts);
-rvPosts.setAdapter(adapter);
-rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPosts();
+        rvPosts = (RecyclerView) view.findViewById(R.id.rvPosts);
+        //init arraylist
+        allPosts = new ArrayList<>();
+        //construct adapter
+        adapter = new PostsAdapter(getContext(), allPosts);
 
-        
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        rvPosts.setLayoutManager(linearLayoutManager);
+      //  scrollListener = new EndlessRecyclerViewScrollListener(linearLayoutManager) {
+       //     @Override
+         //   public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                // Triggered only when new data needs to be appended to the list
+                // Add whatever code is needed to append new items to the bottom of the list
+           //     loadNextData(page);
+         //   }
+      //  };
+     //   rvPosts.addOnScrollListener(scrollListener);
+        //set the adapter
+        rvPosts.setAdapter(adapter);
+        swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                queryPosts();
+            }
+        });
+        // Configure the refreshing colors
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
     }
 
     protected void queryPosts() {
